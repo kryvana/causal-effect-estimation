@@ -82,17 +82,25 @@ From the thesis:
 
 ## Setup
 
-Requires Python 3.10.
+The notebooks were run with Python 3.10. With [conda](https://docs.conda.io):
 
 ```bash
-conda create -n thesis python=3.10
-conda activate thesis
-pip install -r requirements.txt
-pip install jupyterlab
+conda create -n barycenter-causal-effects python=3.10
+conda activate barycenter-causal-effects
+python -m pip install -r requirements.txt jupyterlab
 jupyter lab
 ```
 
-Open a notebook in `notebooks/` and choose **Kernel → Restart Kernel and Run All Cells**.
+Without conda, using Python's built-in virtual environments:
+
+```bash
+python3.10 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt jupyterlab
+jupyter lab
+```
+
+Open a notebook in `notebooks/`. The notebooks were saved with a kernel called "Python (Thesis)", which exists only on the author's machine. If JupyterLab asks you to select a kernel, choose **Python 3 (ipykernel)**. Then run **Kernel → Restart Kernel and Run All Cells**.
 
 ### What to expect when running
 
