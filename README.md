@@ -15,7 +15,7 @@ This project approximates the causal effect in such a probabilistic semi-Markovi
 
 1. **Generate graph and data (DGP).**
    - **Directed edges** are drawn with Bernoulli parameter `q`. The graph is stored as a strictly lower-triangular adjacency matrix, so it is always acyclic.
-   - **Bidirected edges** are hidden confounders `U0, U1, …`, each pointing to two observed variables. They are drawn with Bernoulli parameter `p`. Each pair of observed variables gets two draws, so a pair is confounded with probability 1 − (1 − p)².
+   - **Bidirected edges** are hidden confounders `U0, U1, …`, each pointing to two observed variables. They are drawn with Bernoulli parameter `p`.
    - **Edge probabilities:** every edge gets an existence probability drawn from U(0, 1).
    - **Data:** sampled from a structural equation model on the graph (see [Models](#models)).
 2. **Split the graph** into all 2^m subgraphs (surrogates), one for each way of keeping or dropping the m uncertain edges.
